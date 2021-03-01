@@ -17,7 +17,9 @@
             <!-- ここに、JavaScriptを記述します -->
             <script>
                 let display = document.getElementById('time');
-                display.innerHTML = '10時 23分 46秒';
+                const today = new Date();
+                let now = `${today.getHours()}時${today.getMinutes()}分${today.getSeconds()}秒`;
+                display.innerHTML = now;
             </script>
         </div>
     </div>
