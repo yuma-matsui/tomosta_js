@@ -16,8 +16,10 @@
             
             <script>
                 const today = new Date();
-                const birthday = new Date(1543, 0, 31);
-                document.write(today.getMonth());
+                let hour = today.getHours();
+                let min = today.getMinutes();
+                let sec = today.getSeconds();
+                document.write(`${hour}時${min}分${sec}秒`);
             </script>
         </div>
     </div>
