@@ -15,13 +15,11 @@
         <div class="frame__inner">
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                // 消費税を計算する関数
-                const getTax = (price, tax=10) => {
-                    return Math.round(price * (tax / 100));
-                }
+                //消費税を計算する関数(アロー関数)
+                const getTax = (price, tax = 10) => price + (price * ( tax / 100));
 
-                let tax = getTax(1980, 8);
-                document.write(tax);
+                let tax = getTax(200, 8);
+                document.write(Math.round(tax));
             </script>
         </div>
     </div>
