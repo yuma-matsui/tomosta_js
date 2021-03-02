@@ -16,12 +16,12 @@
             <!-- ここに、JavaScriptを記述します -->
             <script>
                 const zip_pattern = /^\d{3}-?\d{4}$/g;
-                let zip = '111-2222';
+                let zip = '123sss-4567';
 
-                if (zip_pattern.test(zip)) {
+                if(zip_pattern.test(zip) === true){
                     document.write('正しく入力されました');
                 } else {
-                    document.write('郵便番号は xxx-xxxxの書式で入力してください');
+                    document.write('誤りがあります');
                 }
             </script>
         </div>

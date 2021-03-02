@@ -20,11 +20,12 @@
                 const agree = document.getElementById('agree');
                 agree.addEventListener('change', () => {
                     const btn = document.getElementById('submit');
-                    if (agree.checked){
-                        btn.disabled = false;
-                    } else {
-                        btn.disabled = true;
-                    }
+                    // if (agree.checked){
+                    //     btn.disabled = false;
+                    // } else {
+                    //     btn.disabled = true;
+                    // }
+                    btn.disabled = !agree.checked;
                 });
             </script>
         </div>
