@@ -15,23 +15,26 @@
         <div class="frame__inner">
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                // Itemクラスを定義する
                 class Item {
-                    // コンストラクターを定義する
-                    constructor(price) {
-                        // プロパティを定義する
+                    constructor(price, tax = 10){
                         this.price = price;
+                        this.tax = tax;
                     }
 
-                    // 消費税を取得するメソッド
-                    getTax() {
-                        return Math.round(this.price * (10 / 100));
+                    getTax(){
+                        return Math.round(this.price + ( this.price * (this.tax / 100)));
                     }
                 }
-                
-                const price = parseInt(prompt('商品の金額を入力してください'));
-                const item = new Item(price);
+
+                let item = new Item(1000, 15);
                 document.write(item.getTax());
+
+                let item2 = new Item(2033, 30);
+                document.write(`<br>${item2.getTax()}`);
+
+                const price = parseInt(prompt('商品価格を入れてください'));
+                let item3 = new Item(price, 10);
+                document.write(`<br>${item3.getTax()}`);
             </script>
         </div>
     </div>
