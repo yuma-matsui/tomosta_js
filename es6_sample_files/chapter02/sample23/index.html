@@ -18,13 +18,13 @@
             </p>
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                const email = document.querySelector('input[name="email"]')
-                email.addEventListener('blur', () => {
+                const email = document.querySelector('input[name="email"]');
+                email.addEventListener('blur', ()=> {
                     if (email.value === '') {
-                        email.style.backgroundColor = '#fcc';
-                        email.nextElementSibling.innerHTML = '※ メールアドレスをご記入ください';
+                        email.style.backgroundColor = 'pink';
+                        email.nextElementSibling.innerHTML = '*メールアドレスを入力してください';
                     } else {
-                        email.style.backgroundColor = '#fff';
+                        email.style.backgroundColor = 'white';
                         email.nextElementSibling.innerHTML = '';
                     }
                 });
