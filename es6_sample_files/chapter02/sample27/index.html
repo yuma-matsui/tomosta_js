@@ -15,13 +15,10 @@
         <div class="frame__inner">
             <div id="timer"></div>
             <!-- ここに、JavaScriptを記述します -->
+            <script src="timer.js"></script>
             <script>
-                let timer = () => {
-                    let now = new Date();
-                    document.getElementById('timer').innerHTML = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-                };
                 let timerId = setInterval(timer, 500);
-                clearInterval(timerId);
+                // clearInterval(timerId);
             </script>
         </div>
     </div>
