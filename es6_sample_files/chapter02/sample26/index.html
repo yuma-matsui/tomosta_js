@@ -15,7 +15,17 @@
         <div class="frame__inner">
             <!-- ここに、JavaScriptを記述します -->
             <script>
-                location.href = 'http://company.tomosta.jp/';
+                // location.href ='http://company.tomosta.jp/';
+
+                let hp = 100;
+                let count = 0;
+                while(hp > 0){
+                    const damage = Math.floor((Math.random() * 29) + 1);
+                    hp -= damage;
+                    console.log(hp);
+                    count++;
+                }
+                console.log(`${count}回の攻撃で敵を倒しました`)
             </script>
         </div>
     </div>
